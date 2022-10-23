@@ -1,5 +1,3 @@
-import { forwardRef } from "react";
-
 interface IButton {
   label?: string;
   onClick?: () => void;
@@ -11,7 +9,7 @@ interface IButton {
   className?: string;
 }
 
-const Button = forwardRef((props: IButton, ref: any) => {
+const Button = (props: IButton) => {
   let style;
   let iconPlace;
 
@@ -29,19 +27,18 @@ const Button = forwardRef((props: IButton, ref: any) => {
 
   switch (props.iconPossition) {
     case "left":
-      iconPlace = "flex flex-row-reverse items-center space-x-2";
+      iconPlace = "flex flex-row items-center space-x-2";
       break;
     case "right":
-      iconPlace = "flex flex-row items-center space-x-2";
+      iconPlace = "flex flex-row-reverse items-center space-x-2";
       break;
     default:
       break;
   }
   return (
     <button
-      ref={ref}
       onClick={props.onClick}
-      className={`${style} ${iconPlace} py-2 px-2 font-bold capitalize rounded-lg ${
+      className={`${style} ${iconPlace} py-2 px-6 font-bold capitalize rounded-lg ${
         props.isFull ? "w-full" : "w-auto"
       } ${props.className}`}
     >
@@ -49,8 +46,6 @@ const Button = forwardRef((props: IButton, ref: any) => {
       {props.withIcon && props.IconComponent}
     </button>
   );
-});
-
-Button.displayName = "Button";
+};
 
 export default Button;

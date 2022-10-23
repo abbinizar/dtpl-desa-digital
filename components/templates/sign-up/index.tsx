@@ -13,7 +13,7 @@ const SignUp = () => {
           <Button isFull label="Buat Akun" />
           <div className="text-sm flex space-x-2 items-center">
             <p>Sudah punya akun? </p>
-            <Link href="/">
+            <Link href="/sign-in">
               <p className="text-tosca cursor-pointer">Masuk</p>
             </Link>
           </div>
