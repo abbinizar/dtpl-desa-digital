@@ -1,6 +1,6 @@
 import Input from "../../atoms/input/input";
 
-const FormRegister = () => {
+const FormRegisterWarga = () => {
   return (
     <div className="space-y-4">
       <Input label="NIK" placeholder="Ketikkan NIK" />
@@ -14,4 +14,4 @@ const FormRegister = () => {
   );
 };
 
-export default FormRegister;
+export default FormRegisterWarga;

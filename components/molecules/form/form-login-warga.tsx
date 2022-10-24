@@ -1,6 +1,6 @@
 import Input from "../../atoms/input/input";
 
-const FormLogin = () => {
+const FormLoginWarga = () => {
   return (
     <div className="space-y-4">
       <Input label="No. HP" placeholder="Ketikkan no. HP Anda" />
@@ -9,4 +9,4 @@ const FormLogin = () => {
   );
 };
 
-export default FormLogin;
+export default FormLoginWarga;

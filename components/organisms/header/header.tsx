@@ -37,7 +37,7 @@ const Header = () => {
     },
   ];
   return (
-    <header className="h-16 w-full bg-tosca-darkest sticky top-0 p-4 px-16 flex items-center justify-between">
+    <header className="z-50 h-16 w-full bg-tosca-darkest sticky top-0 p-4 px-16 flex items-center justify-between">
       <div>
         <p className="text-white font-bold text-2xl">Desa Digital Manud Jaya</p>
       </div>

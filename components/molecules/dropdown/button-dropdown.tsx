@@ -35,12 +35,12 @@ const ButtonDropdown = (props: IButtonDropdown) => {
         IconComponent={props.iconComponent}
         withIcon
         iconPossition="right"
-        className="bg-transparent active:bg-tosca-darkest-1 hover:bg-tosca-darkest-1 font-normal"
+        className="bg-transparent active:bg-tosca-darkest-1 hover:bg-tosca-darkest-1 font-normal relative"
       />
       {click && (
         <div
-          style={{ minWidth: widthItem }}
-          className="absolute p-2 space-y-2 shadow bg-white rounded-lg mt-2"
+          style={{ minWidth: widthItem, zIndex: 1 }}
+          className="z-50 absolute p-2 space-y-2 shadow bg-white rounded-lg mt-2"
         >
           {props.itemData.map((e: any, i: number) => {
             return (
