@@ -10,7 +10,7 @@ const Header = () => {
     },
     {
       title: "Kabar Desa",
-      href: "/",
+      href: "/village-news",
     },
     {
       title: "Jadwal Layanan",
