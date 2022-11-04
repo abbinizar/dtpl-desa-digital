@@ -48,11 +48,11 @@ const UserHeader = (props: IUserHeader) => {
   const user = [
     {
       title: "Akun Warga",
-      href: "/",
+      href: "/akun",
     },
     {
       title: "Surat Saya",
-      href: "/",
+      href: "/akun/surat-saya",
     },
     {
       title: "Logout",

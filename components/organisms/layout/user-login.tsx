@@ -34,7 +34,7 @@ const UserLogin = (props: IUserLogin) => {
                 Keuangan Desa
               </p>
             </Link>
-            <Link href={"/account"}>
+            <Link href={"/akun"}>
               <div className="rounded-full cursor-pointer">
                 <Image
                   className="w-10 h-10 rounded-full"

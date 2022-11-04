@@ -6,6 +6,7 @@ const FormLoginPegawai = () => {
       <Input
         label="Nomor Induk Pegawai (NIP)"
         placeholder="Ketikkan no. HP Anda"
+        type="number"
       />
       <Input label="Password" placeholder="Password" type="password" />
     </div>

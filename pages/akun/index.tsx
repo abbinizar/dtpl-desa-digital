@@ -1,5 +1,5 @@
-import UserHeader from "../components/organisms/layout/user-header";
-import Account from "../components/templates/account";
+import UserHeader from "../../components/organisms/layout/user-header";
+import Account from "../../components/templates/account";
 
 const AccountPage = () => {
   return (

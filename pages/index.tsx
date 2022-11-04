@@ -27,7 +27,7 @@ const Home: NextPage = () => {
     <UserHeader>
       <div className="flex flex-col w-full justify-center bg-white">
         <div className="flex justify-between p-16 h-42 w-full bg-grey-light flex items-center">
-          <div className="text-5xl space-y-4 text-tosca-dark">
+          <div className="text-5xl space-y-4 text-tosca-dark flex flex-col items-center">
             <p>Selamat datang, Warga! </p>
             <p>
               Desa Digital <b className="text-slate-800">Manud Jaya</b>
@@ -60,14 +60,12 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="flex flex-col p-16 justify-center items-center space-y-4 bg-tosca-darkest">
-          <h1 className="text-4xl text-white font-semibold">
-            Maju Bersama Manud Jaya!
+          <h1 className="text-4xl text-white font-normal">
+            Maju Bersama <b>Manud Jaya!</b>
           </h1>
           <h2 className="text-lg text-white text-center">
-            Helping patients achieve good dental health & beautiful smile is a
-            privilege & responsibility. For over 30 years, we proudly provided
-            the best dental experience in New York. Our comfort-first approach
-            is designed to meet the needs of you & your entire family.
+            Mewujudkan Desa Digital <b>Manud Jaya</b> yang Aman, Maju, Sejahtera
+            dan Agamis dengan nuansa Gotong Royong
           </h2>
         </div>
       </div>
