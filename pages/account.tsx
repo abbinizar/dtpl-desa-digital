@@ -1,11 +1,11 @@
-import UserLogin from "../components/organisms/layout/user-login";
+import UserHeader from "../components/organisms/layout/user-header";
 import Account from "../components/templates/account";
 
 const AccountPage = () => {
   return (
-    <UserLogin>
+    <UserHeader isLogin>
       <Account />
-    </UserLogin>
+    </UserHeader>
   );
 };
 

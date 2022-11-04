@@ -1,11 +1,10 @@
-import CardNews from "../components/molecules/cards/card-news";
-import Header from "../components/organisms/header/header";
-import UserLogout from "../components/organisms/layout/user-logout";
-import { newsData } from "../helpers/metadata/data";
+import CardNews from "../../components/molecules/cards/card-news";
+import UserHeader from "../../components/organisms/layout/user-header";
+import { newsData } from "../../helpers/metadata/data";
 
 const VillageNews = () => {
   return (
-    <UserLogout>
+    <UserHeader>
       <div>
         <div className="p-12 space-y-8">
           <div className="w-full flex justify-center">
@@ -26,7 +25,7 @@ const VillageNews = () => {
           })}
         </div>
       </div>
-    </UserLogout>
+    </UserHeader>
   );
 };
 

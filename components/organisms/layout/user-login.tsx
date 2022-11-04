@@ -40,7 +40,7 @@ const UserLogin = (props: IUserLogin) => {
                   className="w-10 h-10 rounded-full"
                   width={40}
                   height={40}
-                  src={getStatic("grandma.png")}
+                  src={getStatic("avatar.png")}
                 />
               </div>
             </Link>

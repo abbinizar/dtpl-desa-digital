@@ -5,7 +5,7 @@ import Header from "../components/organisms/header/header";
 import ImageGroup from "../components/organisms/image/image-group";
 import Card from "../components/atoms/card/card";
 import PlusOutline from "../components/atoms/icon/plus-outline";
-import UserLogout from "../components/organisms/layout/user-logout";
+import UserHeader from "../components/organisms/layout/user-header";
 
 const data = [
   "Kabar Desa Manud Jaya",
@@ -24,7 +24,7 @@ const Home: NextPage = () => {
   };
 
   return (
-    <UserLogout>
+    <UserHeader>
       <div className="flex flex-col w-full justify-center bg-white">
         <div className="flex justify-between p-16 h-42 w-full bg-grey-light flex items-center">
           <div className="text-5xl space-y-4 text-tosca-dark">
@@ -71,7 +71,7 @@ const Home: NextPage = () => {
           </h2>
         </div>
       </div>
-    </UserLogout>
+    </UserHeader>
   );
 };
 
