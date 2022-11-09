@@ -1,5 +1,7 @@
+import UserHeader from "../../components/organisms/layout/user-header";
+
 const LetterRequestPage = () => {
-  return <div>LetterRequestPage</div>;
+  return <UserHeader />;
 };
 
 export default LetterRequestPage;

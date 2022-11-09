@@ -1,5 +1,7 @@
+import UserHeader from "../../components/organisms/layout/user-header";
+
 const CommplaintPage = () => {
-  return <div>CommplaintPage</div>;
+  return <UserHeader></UserHeader>;
 };
 
 export default CommplaintPage;

@@ -20,6 +20,9 @@ module.exports = {
         "tosca-darkest": "#6EB6BA",
         "tosca-darkest-1": "#66AFB4",
       },
+      boxShadow: {
+        card: "0px 0px 20px rgba(14, 71, 74, 0.1);",
+      },
     },
   },
   plugins: [],

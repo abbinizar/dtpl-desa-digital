@@ -1,5 +1,7 @@
+import UserHeader from "../../components/organisms/layout/user-header";
+
 const AboutVillagePage = () => {
-  return <div>AboutVillagePage</div>;
+  return <UserHeader></UserHeader>;
 };
 
 export default AboutVillagePage;

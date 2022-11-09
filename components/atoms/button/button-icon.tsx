@@ -9,7 +9,7 @@ interface IButton {
   className?: string;
 }
 
-const Button = (props: IButton) => {
+const ButtonIcon = (props: IButton) => {
   let style;
   let iconPlace;
 
@@ -38,7 +38,7 @@ const Button = (props: IButton) => {
   return (
     <button
       onClick={props.onClick}
-      className={`${style} ${iconPlace} py-2 px-6 font-bold capitalize rounded-lg ${
+      className={`${style} ${iconPlace} py-2 px-2 font-bold capitalize rounded-lg ${
         props.isFull ? "w-full" : "w-auto"
       } ${props.className}`}
     >
@@ -48,4 +48,4 @@ const Button = (props: IButton) => {
   );
 };
 
-export default Button;
+export default ButtonIcon;

@@ -5,7 +5,9 @@ interface ICard {
 }
 
 const Card = (props: ICard) => {
-  return <div className="p-4 shadow-lg rounded-lg flex">{props.children}</div>;
+  return (
+    <div className="p-4 shadow-card rounded-lg flex">{props.children}</div>
+  );
 };
 
 export default Card;

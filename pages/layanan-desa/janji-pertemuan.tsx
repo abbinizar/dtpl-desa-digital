@@ -1,5 +1,7 @@
+import UserHeader from "../../components/organisms/layout/user-header";
+
 const AppointmentPage = () => {
-  return <div>AppointmentPage</div>;
+  return <UserHeader></UserHeader>;
 };
 
 export default AppointmentPage;

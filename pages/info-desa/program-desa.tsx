@@ -1,5 +1,7 @@
+import UserHeader from "../../components/organisms/layout/user-header";
+
 const VillageProgramPage = () => {
-  return <div>VillageProgramPage</div>;
+  return <UserHeader></UserHeader>;
 };
 
 export default VillageProgramPage;

@@ -1,7 +1,7 @@
 import UserHeader from "../components/organisms/layout/user-header";
 
 const BerandaPage = () => {
-  return <UserHeader isLogin>welcome!</UserHeader>;
+  return <UserHeader isLogin></UserHeader>;
 };
 
 export default BerandaPage;

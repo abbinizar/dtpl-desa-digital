@@ -14,34 +14,34 @@ const UserHeader = (props: IUserHeader) => {
   const information = [
     {
       title: "Tentang Desa",
-      href: "/",
+      href: "/info-desa/tentang-desa",
     },
     {
       title: "Kabar Desa",
-      href: "/village-news",
+      href: "/info-desa/kabar-desa",
     },
     {
       title: "Jadwal Layanan",
-      href: "/",
+      href: "/info-desa/jadwal-layanan",
     },
     {
       title: "Program Desa",
-      href: "/",
+      href: "/info-desa/program-desa",
     },
   ];
 
   const service = [
     {
       title: "Buat Janji Pertemuan",
-      href: "/",
+      href: "/layanan-desa/janji-pertemuan",
     },
     {
       title: "Buat Permintaan Surat",
-      href: "/",
+      href: "/layanan-desa/permintaan-surat",
     },
     {
       title: "Buat Aduan",
-      href: "/",
+      href: "/layanan-desa/aduan",
     },
   ];
 
