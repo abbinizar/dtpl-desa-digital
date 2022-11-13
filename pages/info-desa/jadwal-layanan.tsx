@@ -5,6 +5,8 @@ import Table, {
   TableRow,
 } from "../../components/atoms/table/table";
 import UserHeader from "../../components/organisms/layout/user-header";
+import { useContext } from "react";
+import { UserContext } from "../../helpers/context/user";
 
 const header = ["Hari, tanggal", "Waktu (WIB)", "Ruangan", "Petugas", "Status"];
 const data = [
@@ -31,8 +33,10 @@ const data = [
   },
 ];
 const ServiceSchedulePage = () => {
+  const { user } = useContext(UserContext);
+
   return (
-    <UserHeader>
+    <UserHeader isLogin={user.role !== ""}>
       <div>
         <div className="p-12 space-y-8">
           <div className="w-full flex justify-center">

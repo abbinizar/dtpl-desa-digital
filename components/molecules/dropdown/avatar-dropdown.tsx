@@ -56,6 +56,7 @@ const AvatarDropdown = (props: IAvatarDropdown) => {
               >
                 <Link href={e.href} passHref={true}>
                   <div
+                    onClick={e.onClick}
                     className={`p-3 text-sm text-tosca-darker cursor-pointer font-semibold"`}
                   >
                     {e.title}

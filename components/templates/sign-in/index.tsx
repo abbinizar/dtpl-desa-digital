@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useContext, useState } from "react";
+import { UserContext } from "../../../helpers/context/user";
 import Button from "../../atoms/button/button";
 import Input from "../../atoms/input/input";
 import Tab, {
@@ -13,10 +15,17 @@ import FormLoginWarga from "../../molecules/form/form-login-warga";
 import UserLayout from "../../organisms/layout/user-layout";
 
 const SignIn = () => {
+  const { user } = useContext(UserContext);
+  const [error, setError] = useState("");
   const router = useRouter();
   const handleClick = () => {
-    router.push("/beranda");
+    if (user.username == "" && user.password == "") {
+      setError("Wajib diisi");
+    } else {
+      router.push("/");
+    }
   };
+
   return (
     <UserLayout>
       <div className="flex w-full flex-col space-y-6">
@@ -28,10 +37,10 @@ const SignIn = () => {
           </TabLabelContainer>
           <TabBodyContainer>
             <TabBody>
-              <FormLoginWarga />
+              <FormLoginWarga error={error} />
             </TabBody>
             <TabBody>
-              <FormLoginPegawai />
+              <FormLoginPegawai error={error} />
             </TabBody>
           </TabBodyContainer>
         </Tab>

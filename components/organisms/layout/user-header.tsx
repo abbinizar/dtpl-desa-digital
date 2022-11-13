@@ -4,13 +4,24 @@ import Link from "next/link";
 import ChevronDown from "../../atoms/icon/chevron-down";
 import ButtonDropdown from "../../molecules/dropdown/button-dropdown";
 import AvatarDropdown from "../../molecules/dropdown/avatar-dropdown";
-
+import { useContext } from "react";
+import { UserContext } from "../../../helpers/context/user";
 interface IUserHeader {
   children?: React.ReactNode;
   isLogin?: boolean;
 }
 
 const UserHeader = (props: IUserHeader) => {
+  const { setUser } = useContext(UserContext);
+
+  const logout = () => {
+    setUser({
+      username: "",
+      password: "",
+      role: "",
+    });
+  };
+
   const information = [
     {
       title: "Tentang Desa",
@@ -45,7 +56,7 @@ const UserHeader = (props: IUserHeader) => {
     },
   ];
 
-  const user = [
+  const users = [
     {
       title: "Akun Warga",
       href: "/akun",
@@ -57,6 +68,7 @@ const UserHeader = (props: IUserHeader) => {
     {
       title: "Logout",
       href: "/",
+      onClick: logout,
     },
   ];
 
@@ -92,7 +104,7 @@ const UserHeader = (props: IUserHeader) => {
               }
             />
             {props.isLogin ? (
-              <AvatarDropdown itemData={user}></AvatarDropdown>
+              <AvatarDropdown itemData={users}></AvatarDropdown>
             ) : (
               <Link href={"/sign-in"}>
                 <p className="text-base text-white cursor-pointer">Login</p>

@@ -6,6 +6,8 @@ import ImageGroup from "../components/organisms/image/image-group";
 import Card from "../components/atoms/card/card";
 import PlusOutline from "../components/atoms/icon/plus-outline";
 import UserHeader from "../components/organisms/layout/user-header";
+import { useContext } from "react";
+import { UserContext } from "../helpers/context/user";
 
 const data = [
   "Kabar Desa Manud Jaya",
@@ -17,6 +19,8 @@ const data = [
 ];
 
 const Home: NextPage = () => {
+  const { user } = useContext(UserContext);
+
   const router = useRouter();
 
   const handleRoute = (url: string) => {
@@ -24,7 +28,7 @@ const Home: NextPage = () => {
   };
 
   return (
-    <UserHeader>
+    <UserHeader isLogin={user.role !== ""}>
       <div className="flex flex-col w-full justify-center bg-white">
         <div className="flex justify-between p-16 h-42 w-full bg-grey-light flex items-center">
           <div className="text-5xl space-y-4 text-tosca-dark flex flex-col items-center">
