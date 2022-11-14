@@ -28,10 +28,6 @@ const UserHeader = (props: IUserHeader) => {
       href: "/info-desa/tentang-desa",
     },
     {
-      title: "Kabar Desa",
-      href: "/info-desa/kabar-desa",
-    },
-    {
       title: "Jadwal Layanan",
       href: "/info-desa/jadwal-layanan",
     },
@@ -39,9 +35,17 @@ const UserHeader = (props: IUserHeader) => {
       title: "Program Desa",
       href: "/info-desa/program-desa",
     },
+    {
+      title: "Informasi Dana Desa",
+      href: "/info-desa/pengeluaran-dana",
+    },
   ];
 
   const service = [
+    {
+      title: "Jadwal Layanan",
+      href: "/info-desa/jadwal-layanan",
+    },
     {
       title: "Buat Janji Pertemuan",
       href: "/layanan-desa/janji-pertemuan",
@@ -72,6 +76,17 @@ const UserHeader = (props: IUserHeader) => {
     },
   ];
 
+  const umkm = [
+    {
+      title: "Produk UMKM",
+      href: "/umkm/produk",
+    },
+    {
+      title: "Profil UMKM",
+      href: "/umkm/profil",
+    },
+  ];
+
   return (
     <div>
       <Header
@@ -85,15 +100,10 @@ const UserHeader = (props: IUserHeader) => {
             <Link href={"/"}>
               <p className="text-base text-white cursor-pointer">Beranda</p>
             </Link>
-            <ButtonDropdown
-              itemData={information}
-              label="Info Desa"
-              iconComponent={
-                <div className="pl-2">
-                  <ChevronDown />
-                </div>
-              }
-            />
+            <Link href={"/info-desa/kabar-desa"}>
+              <p className="text-base text-white cursor-pointer">Kabar Desa</p>
+            </Link>
+
             <ButtonDropdown
               itemData={service}
               label="Layanan Desa"
@@ -103,6 +113,28 @@ const UserHeader = (props: IUserHeader) => {
                 </div>
               }
             />
+
+            <ButtonDropdown
+              itemData={umkm}
+              label="UMKM"
+              iconComponent={
+                <div className="pl-2">
+                  <ChevronDown />
+                </div>
+              }
+            />
+            <ButtonDropdown
+              itemData={information}
+              label="Info"
+              iconComponent={
+                <div className="pl-2">
+                  <ChevronDown />
+                </div>
+              }
+            />
+            <Link href={"/forum"}>
+              <p className="text-base text-white cursor-pointer">Forum</p>
+            </Link>
             {props.isLogin ? (
               <AvatarDropdown itemData={users}></AvatarDropdown>
             ) : (
