@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import ButtonIcon from "../../../atoms/button/button-icon";
 import Plus from "../../../atoms/icon/plus";
 import Save from "../../../atoms/icon/save";
@@ -48,6 +49,7 @@ const data = [
   },
 ];
 const MyLetter = () => {
+  const router = useRouter();
   return (
     <div className="w-full p-12 space-y-12">
       <div className="flex justify-between w-full">
@@ -62,6 +64,7 @@ const MyLetter = () => {
             iconPossition="right"
             withIcon
             IconComponent={<Plus />}
+            onClick={() => router.push("/akun/permohonan")}
           />
         </div>
       </div>
@@ -101,7 +104,7 @@ const MyLetter = () => {
                         />
                         <ButtonIcon
                           variant="secondary"
-                          className="text-red border-red"
+                          className="text-[#E34F4F] border-red"
                           label="Delete"
                           iconPossition="right"
                           withIcon

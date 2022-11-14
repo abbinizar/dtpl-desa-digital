@@ -7,6 +7,7 @@ import Table, {
 import UserHeader from "../../components/organisms/layout/user-header";
 import { useContext } from "react";
 import { UserContext } from "../../helpers/context/user";
+import { useRouter } from "next/router";
 
 const header = ["Hari, tanggal", "Waktu (WIB)", "Ruangan", "Petugas", "Status"];
 const data = [
@@ -33,6 +34,7 @@ const data = [
   },
 ];
 const ServiceSchedulePage = () => {
+  const router = useRouter();
   const { user } = useContext(UserContext);
 
   return (
@@ -49,6 +51,7 @@ const ServiceSchedulePage = () => {
             withTitle
             title="Layanan Pembuatan KK, KTP, Akta Kelahiran, Akta Kematian"
             labelButton="Buat  Permintaan Surat"
+            onClick={() => router.push("/layanan-desa/permintaan-surat")}
           >
             <TableHead>
               <TableRow>
