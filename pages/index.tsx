@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Image from "next/image";
 import Button from "../components/atoms/button/button";
 import { useRouter } from "next/router";
 import Header from "../components/organisms/header/header";
@@ -8,14 +9,34 @@ import PlusOutline from "../components/atoms/icon/plus-outline";
 import UserHeader from "../components/organisms/layout/user-header";
 import { useContext } from "react";
 import { UserContext } from "../helpers/context/user";
+import { getStatic } from "../helpers";
+
 
 const data = [
-  "Kabar Desa Manud Jaya",
-  "Tentang Desa Manud Jaya",
-  "Info Keuangan Desa",
-  "Pembuatan Dokumen",
-  "Buat Janti Pertemuan",
-  "Pengaduan & Aspirasi",
+  {
+    title: "Kabar Desa Manud Jaya",
+  icon: getStatic("kabar.png"),
+  },
+  {
+    title:   "Tentang Desa Manud Jaya",
+  icon: getStatic("tentang.png"),
+  },
+  {
+    title: "Info Keuangan Desa",
+  icon: getStatic("keuangan.png"),
+  },
+  {
+    title: "Produk UMKM Warga",
+  icon: getStatic("umkm.png"),
+  },
+  {
+    title: "Buat Janji Pertemuan",
+  icon: getStatic("janji.png"),
+  },
+  {
+    title: "Pengaduan & Aspirasi",
+  icon: getStatic("pengaduan.png"),
+  },
 ];
 
 const Home: NextPage = () => {
@@ -55,8 +76,14 @@ const Home: NextPage = () => {
               return (
                 <Card key={i}>
                   <div className="w-32 flex flex-col items-center space-y-4">
-                    <PlusOutline></PlusOutline>
-                    <p className="text-center">{e}</p>
+                    {/* <PlusOutline></PlusOutline> */}
+                    <Image
+                      width={41}
+                      height={40}
+                      src={e.icon}
+                      alt={`card-${i}`}
+                    />
+                    <p className="text-center">{e.title}</p>
                   </div>
                 </Card>
               );
