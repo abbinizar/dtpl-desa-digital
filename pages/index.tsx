@@ -11,31 +11,31 @@ import { useContext } from "react";
 import { UserContext } from "../helpers/context/user";
 import { getStatic } from "../helpers";
 
-
 const data = [
   {
+    title: "Tentang Desa Manud Jaya",
+    icon: getStatic("tentang.png"),
+    url: "/info-desa/tentang-desa",
+  },
+  {
     title: "Kabar Desa Manud Jaya",
-  icon: getStatic("kabar.png"),
-  },
-  {
-    title:   "Tentang Desa Manud Jaya",
-  icon: getStatic("tentang.png"),
-  },
-  {
-    title: "Info Keuangan Desa",
-  icon: getStatic("keuangan.png"),
+    icon: getStatic("kabar.png"),
+    url: "/info-desa/kabar-desa",
   },
   {
     title: "Produk UMKM Warga",
-  icon: getStatic("umkm.png"),
+    icon: getStatic("umkm.png"),
+    url: "/umkm/produk",
   },
   {
-    title: "Buat Janji Pertemuan",
-  icon: getStatic("janji.png"),
+    title: "Layanan Desa",
+    icon: getStatic("janji.png"),
+    url: "/info-desa/jadwal-layanan",
   },
   {
-    title: "Pengaduan & Aspirasi",
-  icon: getStatic("pengaduan.png"),
+    title: "Forum Desa",
+    icon: getStatic("pengaduan.png"),
+    url: "/forum",
   },
 ];
 
@@ -74,8 +74,8 @@ const Home: NextPage = () => {
           <div className="p-4 flex justify-between">
             {data.map((e, i) => {
               return (
-                <Card key={i}>
-                  <div className="w-32 flex flex-col items-center space-y-4">
+                <Card key={i} onClick={() => router.push(e.url)}>
+                  <div className="cursor-pointer w-32 flex flex-col items-center space-y-4">
                     {/* <PlusOutline></PlusOutline> */}
                     <Image
                       width={41}
