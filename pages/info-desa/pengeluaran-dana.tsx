@@ -4,9 +4,14 @@ import { UserContext } from "../../helpers/context/user";
 import Expense from "../../components/templates/village-info/expense";
 import ButtonIcon from "../../components/atoms/button/button-icon";
 import Plus from "../../components/atoms/icon/plus";
+import Link from "next/link";
+import { useRouter } from "next/router";
+
+
 
 const ExpensePage = () => {
-  const { user } = useContext(UserContext);
+const router = useRouter();
+const { user } = useContext(UserContext);
 
   return (
     <UserHeader isLogin={user.role !== ""}>
@@ -21,16 +26,16 @@ const ExpensePage = () => {
               Informasi Pengeluaran Dana
             </h1>
             {user.role === "pegawai" && (
-              <div className="flex justify-end">
-                <ButtonIcon
-                  className="bg-tosca-darkest"
-                  label="Tambahkan Info Pengeluaran"
-                  iconPossition="right"
-                  withIcon
-                  IconComponent={<Plus />}
-                  // onClick={() => router.push("/info-desa/buat-kabar")}
-                />
-              </div>
+            <div className="flex justify-end">
+              <ButtonIcon
+                className="bg-tosca-darkest"
+                label="Tambahkan Info Pengeluaran"
+                iconPossition="right"
+                withIcon
+                IconComponent={<Plus />}
+                onClick={() => router.push("/info-desa/form-pengeluaran")}
+              />
+            </div>
             )}
           </div>
           <div>

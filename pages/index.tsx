@@ -14,28 +14,34 @@ import { getStatic } from "../helpers";
 
 const data = [
   {
-    title: "Kabar Desa Manud Jaya",
+  title: "Kabar Desa Manud Jaya",
   icon: getStatic("kabar.png"),
+  path: "/info-desa/kabar-desa"
   },
   {
-    title:   "Tentang Desa Manud Jaya",
+  title:   "Tentang Desa Manud Jaya",
   icon: getStatic("tentang.png"),
+  path: "/info-desa/tentang-desa"
   },
   {
-    title: "Info Keuangan Desa",
+  title: "Info Keuangan Desa",
   icon: getStatic("keuangan.png"),
+  path: "/info-desa/pengeluaran-dana"
   },
   {
-    title: "Produk UMKM Warga",
+  title: "Produk UMKM Warga",
   icon: getStatic("umkm.png"),
+  path: "/umkm/profil"
   },
   {
     title: "Buat Janji Pertemuan",
   icon: getStatic("janji.png"),
+  path: "/layanan-desa/janji-pertemuan"
   },
   {
     title: "Pengaduan & Aspirasi",
   icon: getStatic("pengaduan.png"),
+  path: "/layanan-desa/aduan"
   },
 ];
 
@@ -74,7 +80,7 @@ const Home: NextPage = () => {
           <div className="p-4 flex justify-between">
             {data.map((e, i) => {
               return (
-                <Card key={i}>
+                <Card key={i} onClickCard={() => router.push(`${e.path}`)}>
                   <div className="w-32 flex flex-col items-center space-y-4">
                     {/* <PlusOutline></PlusOutline> */}
                     <Image
