@@ -73,6 +73,7 @@ const MyLetter = () => {
         withTitle
         title="Layanan Pembuatan KK, KTP, Akta Kelahiran, Akta Kematian"
         labelButton="Buat  Permohonan Baru"
+        onClick={() => router.push("/akun/permohonan")}
       >
         <TableHead>
           <TableRow>
@@ -134,6 +135,7 @@ const MyLetter = () => {
         withTitle
         title="Layanan Pelaporan, Aspirasi, dan Peyuratan Lainnya"
         labelButton="Buat  Permohonan Baru"
+        onClick={() => router.push("/akun/permohonan")}
       >
         <div className="flex w-full justify-center h-40 items-center">
           <p className="text-xl text-slate-300 font-bold">Belum ada surat</p>

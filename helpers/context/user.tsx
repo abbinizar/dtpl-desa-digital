@@ -12,9 +12,19 @@ const UserData = (props: IUserData) => {
     role: "",
   });
 
+  const [product, setProduct] = useState({
+    seller: "",
+    image: "",
+    avatar: "",
+    title: "",
+    price: "",
+  });
+
   const state = {
     user,
     setUser,
+    product,
+    setProduct,
   };
   return (
     <UserContext.Provider value={state}>{props.children}</UserContext.Provider>
