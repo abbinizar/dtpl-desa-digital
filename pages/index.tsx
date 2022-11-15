@@ -71,7 +71,7 @@ const Home: NextPage = () => {
               Berbagai layanan tersedia untuk berbagai keperluan warga.
             </h2>
           </div>
-          <div className="p-4 flex justify-between">
+          <div className="p-4 flex justify-center space-x-6">
             {data.map((e, i) => {
               return (
                 <Card key={i} onClick={() => router.push(e.url)}>
