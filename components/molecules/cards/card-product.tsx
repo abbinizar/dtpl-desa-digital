@@ -6,10 +6,14 @@ interface IProps {
   title?: string;
   avatar?: string;
   seller?: string;
+  onClick?: () => void;
 }
 const CardProduct = (props: IProps) => {
   return (
-    <div className="shadow-product rounded-lg overflow-hidden w-[240px]">
+    <div
+      onClick={props.onClick}
+      className="cursor-pointer shadow-product rounded-lg overflow-hidden w-[240px]"
+    >
       <Image
         width={240}
         height={240}

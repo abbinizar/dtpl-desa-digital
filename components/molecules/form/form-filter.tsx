@@ -11,7 +11,7 @@ const FormFilter = () => {
       </div>
       <div className="space-y-2">
         <p className="text-xs">Periode Informasi Keuangan</p>
-        <select className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-tosca-dark focus:border-blue-500 block w-full p-2.5 outline-none">
+        <select className="border border-grey-light text-gray-900 text-sm rounded-lg focus:ring-tosca-dark focus:border-blue-500 block w-full p-2.5 outline-none">
           <option selected>Juli - Desember 2022</option>
           <option value="US">Januari - Juni 2022</option>
           <option value="DE">Juli - Desember 2021</option>
