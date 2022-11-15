@@ -72,6 +72,37 @@ const ProductUmkm = () => {
     },
   ];
 
+  const craft = [
+    {
+      price: "Rp 75.000",
+      avatar: "umkm/avatar3.png",
+      seller: "Amelia Rajut",
+      src: "umkm/tas.png",
+      tittle: "Tas Rajut ",
+    },
+    {
+      price: "Rp 75.000",
+      avatar: "umkm/avatar3.png",
+      seller: "Amelia Rajut",
+      src: "umkm/tas.png",
+      tittle: "Tas Rajut ",
+    },
+    {
+      price: "Rp 75.000",
+      avatar: "umkm/avatar3.png",
+      seller: "Amelia Rajut",
+      src: "umkm/tas.png",
+      tittle: "Tas Rajut ",
+    },
+    {
+      price: "Rp 75.000",
+      avatar: "umkm/avatar3.png",
+      seller: "Amelia Rajut",
+      src: "umkm/tas.png",
+      tittle: "Tas Rajut ",
+    },
+  ];
+
   const { product, setProduct } = useContext(UserContext);
 
   const [show, setShow] = useState(false);
@@ -131,6 +162,24 @@ const ProductUmkm = () => {
           <h3 className="text-xl font-bold text-center">Fashion</h3>
           <div className="flex justify-between">
             {fashion.map((e, i) => {
+              return (
+                <CardProduct
+                  key={i}
+                  avatar={getStatic(e.avatar)}
+                  src={getStatic(e.src)}
+                  seller={e.seller}
+                  title={e.tittle}
+                  price={e.price}
+                  onClick={() => handleProduct(e)}
+                />
+              );
+            })}
+          </div>
+        </div>
+        <div className="space-y-6">
+          <h3 className="text-xl font-bold text-center">Kerajinan Tangan</h3>
+          <div className="flex justify-between">
+            {craft.map((e, i) => {
               return (
                 <CardProduct
                   key={i}
