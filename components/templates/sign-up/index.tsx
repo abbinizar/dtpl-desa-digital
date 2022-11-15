@@ -10,11 +10,20 @@ import FormRegisterPegawai from "../../molecules/form/form-register-pegawai";
 import FormRegisterWarga from "../../molecules/form/form-register-warga";
 import UserLayout from "../../organisms/layout/user-layout";
 import { useRouter } from "next/router";
+import { UserContext } from "../../../helpers/context/user";
+import { useContext, useState } from "react";
 
 const SignUp = () => {
+  const { user } = useContext(UserContext);
+  const [error, setError] = useState("");
+
   const router = useRouter();
   const handleClick = () => {
-    router.push("/beranda");
+    if (user.username == "" && user.password == "") {
+      setError("Wajib diisi");
+    } else {
+      router.push("/");
+    }
   };
   return (
     <UserLayout>
@@ -27,10 +36,10 @@ const SignUp = () => {
           </TabLabelContainer>
           <TabBodyContainer>
             <TabBody>
-              <FormRegisterWarga />
+              <FormRegisterWarga error={error} />
             </TabBody>
             <TabBody>
-              <FormRegisterPegawai />
+              <FormRegisterPegawai error={error} />
             </TabBody>
           </TabBodyContainer>
         </Tab>
