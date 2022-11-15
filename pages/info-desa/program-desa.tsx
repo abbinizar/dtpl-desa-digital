@@ -10,6 +10,9 @@ import Table, {
   TableHead,
   TableRow,
 } from "../../components/atoms/table/table";
+import ButtonIcon from "../../components/atoms/button/button-icon";
+import Plus from "../../components/atoms/icon/plus";
+import { useRouter } from "next/router";
 
 const VillageProgramPage = () => {
   const { user } = useContext(UserContext);
@@ -47,15 +50,32 @@ const VillageProgramPage = () => {
       status: "Aktif",
     },
   ];
+  const router = useRouter();
 
   return (
     <UserHeader isLogin={user.role !== ""}>
       <div>
         <div className="p-12 space-y-8 flex flex-col justify-center items-center">
-          <div className="w-full flex justify-center">
+          <div
+            className={`w-full flex ${
+              user.role === "pegawai" ? "justify-between" : "justify-center"
+            }`}
+          >
             <h1 className="text-3xl font-bold text-tosca-darkest">
               Info Program Desa
             </h1>
+            {user.role === "pegawai" && (
+              <div className="flex justify-end">
+                <ButtonIcon
+                  className="bg-tosca-darkest"
+                  label="Buat Jadwal Layanan"
+                  iconPossition="right"
+                  withIcon
+                  IconComponent={<Plus />}
+                  // onClick={() => router.push("/info-desa/buat-kabar")}
+                />
+              </div>
+            )}
           </div>
           <div className="flex flex-col items-center space-y-8">
             <Image
