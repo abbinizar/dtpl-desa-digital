@@ -7,10 +7,10 @@ export const newsData = [
     image: "image-news.png",
   },
   {
-    category: "Kabar UMKM",
-    title: "Brownies Lezat Bu Marwah,",
+    category: "Kabar Tani",
+    title: "Bazaar Hasil Tani Manud Jaya,",
     description:
-      "Bagi penyuka kudapan manis, brownies kerap masuk dalam list makanan yang harus tersedia dalam daftar snack yang akan disantap. Apalagi, identik dengan cokelat yang gurih brownies belakangan juga banyak ditenteng sebagai buah tangan saat berkunjung ke rumah sanak family ataupun relasi. Bu Marwah menawarkan brownies panggang lewat dengan topping almond yang dibandrol hanya Rp 35.000/ loyang. Mari kita dukung dan sukseskan usaha bu Marwah untuk UMKM Manud Jaya yang lebih baik.",
-    image: "image-news.png",
+      "Bazar akan diselenggarakan pada Sabtu, 8 April 2021 dalam rangka ulang tahun Desa Manud Jaya. Produk yang dijual adalah hortikultura, seperti buncis, wortel, cabai, beras, dan buah lokal Desa Manud Jaya. Untuk lebih membantu petani, kegiatan itu pun akan terus berkelanjutan. Bagaimana pun, bazar itu untuk memberikan proteksi atau perlindungan kepada konsumen serta kepedulian kepada petani. Masyarakat bisa mendapat harga relatif terjangkau. Mari kita dukung dan sukseskan bersama acara bazaar untuk Manud Jaya yang lebih baik.",
+    image: "tani.png",
   },
 ];

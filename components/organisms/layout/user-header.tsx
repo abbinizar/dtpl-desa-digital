@@ -12,7 +12,7 @@ interface IUserHeader {
 }
 
 const UserHeader = (props: IUserHeader) => {
-  const { setUser } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
 
   const logout = () => {
     setUser({
@@ -62,7 +62,7 @@ const UserHeader = (props: IUserHeader) => {
 
   const users = [
     {
-      title: "Akun Warga",
+      title: user.role === "pegawai" ? "Akun Pegawai" : "Akun Warga",
       href: "/akun",
     },
     {

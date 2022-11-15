@@ -11,37 +11,31 @@ import { useContext } from "react";
 import { UserContext } from "../helpers/context/user";
 import { getStatic } from "../helpers";
 
-
 const data = [
   {
-  title: "Kabar Desa Manud Jaya",
-  icon: getStatic("kabar.png"),
-  path: "/info-desa/kabar-desa"
+    title: "Tentang Desa Manud Jaya",
+    icon: getStatic("tentang.png"),
+    url: "/info-desa/tentang-desa",
   },
   {
-  title:   "Tentang Desa Manud Jaya",
-  icon: getStatic("tentang.png"),
-  path: "/info-desa/tentang-desa"
+    title: "Kabar Desa Manud Jaya",
+    icon: getStatic("kabar.png"),
+    url: "/info-desa/kabar-desa",
   },
   {
-  title: "Info Keuangan Desa",
-  icon: getStatic("keuangan.png"),
-  path: "/info-desa/pengeluaran-dana"
+    title: "Produk UMKM Warga",
+    icon: getStatic("umkm.png"),
+    url: "/umkm/produk",
   },
   {
-  title: "Produk UMKM Warga",
-  icon: getStatic("umkm.png"),
-  path: "/umkm/profil"
+    title: "Layanan Desa",
+    icon: getStatic("janji.png"),
+    url: "/info-desa/jadwal-layanan",
   },
   {
-    title: "Buat Janji Pertemuan",
-  icon: getStatic("janji.png"),
-  path: "/layanan-desa/janji-pertemuan"
-  },
-  {
-    title: "Pengaduan & Aspirasi",
-  icon: getStatic("pengaduan.png"),
-  path: "/layanan-desa/aduan"
+    title: "Forum Desa",
+    icon: getStatic("pengaduan.png"),
+    url: "/forum",
   },
 ];
 
@@ -77,11 +71,11 @@ const Home: NextPage = () => {
               Berbagai layanan tersedia untuk berbagai keperluan warga.
             </h2>
           </div>
-          <div className="p-4 flex justify-between">
+          <div className="p-4 flex justify-center space-x-6">
             {data.map((e, i) => {
               return (
-                <Card key={i} onClickCard={() => router.push(`${e.path}`)}>
-                  <div className="w-32 flex flex-col items-center space-y-4">
+                <Card key={i} onClick={() => router.push(e.url)}>
+                  <div className="cursor-pointer w-32 flex flex-col items-center space-y-4">
                     {/* <PlusOutline></PlusOutline> */}
                     <Image
                       width={41}
