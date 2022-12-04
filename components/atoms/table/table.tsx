@@ -9,6 +9,13 @@ interface ITable {
   title?: string;
   labelButton?: string;
   onClick?: () => void;
+  isPegawai?: boolean;
+  labelButtonHapus?: string;
+  onClickHapus?: () => void;
+  labelButtonEdit?: string;
+  onClickEdit?: () => void;
+  labelButtonDownload?: string;
+  onClickDownload?: () => void;
 }
 
 interface ITableContainer {
@@ -53,6 +60,28 @@ const Table = (props: ITable) => {
               IconComponent={<Plus />}
               onClick={props.onClick}
             />
+          )}
+          {props.isPegawai && (
+            <div style={{ display:"flex", justifyContent:"space-between", gap:"15px", width:"30vw" }}>
+            <ButtonIcon
+              className="bg-red"
+              label={props.labelButtonHapus}
+              onClick={props.onClickHapus}
+              isFull
+            />
+            <ButtonIcon
+              className="bg-grey"
+              label={props.labelButtonEdit}
+              onClick={props.onClickEdit}
+              isFull
+            />
+            <ButtonIcon
+              className="bg-tosca-darkest"
+              label={props.labelButtonDownload}
+              onClick={props.onClickDownload}
+              isFull
+            />
+            </div>
           )}
         </div>
       )}
